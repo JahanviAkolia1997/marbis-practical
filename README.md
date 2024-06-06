@@ -6,6 +6,12 @@
 npm install
 ```
 
+### Code Formatting
+To ensure consistent code formatting throughout this project, simply execute the following command:
+```
+npm run format
+```
+
 ### Compiles and hot-reloads for development
 
 ```
@@ -22,12 +28,6 @@ npm run build
 
 ```
 npm run test:unit
-```
-
-### Code Formatting
-
-```
-npm run format
 ```
 
 ### Lints and fixes files

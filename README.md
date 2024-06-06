@@ -24,6 +24,12 @@ npm run build
 npm run test:unit
 ```
 
+### Code Formatting
+
+```
+npm run format
+```
+
 ### Lints and fixes files
 
 ```

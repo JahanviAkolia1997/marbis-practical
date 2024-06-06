@@ -1,11 +1,13 @@
 <template>
   <div class="dropdown">
+    <!-- Loop through sections -->
     <select v-model="selectedUserId" @change="updateSelectedUser">
       <option disabled value="">Select a user</option>
       <option v-for="user in users" :key="user.id" :value="user.id">
         {{ user.name }}
       </option>
     </select>
+    <!-- Display user details -->
     <div class="user-details" v-if="selectedUser">
       <h3>{{ selectedUser.name }}</h3>
       <p><strong>Username:</strong> {{ selectedUser.username }}</p>
@@ -21,6 +23,7 @@
 import { defineComponent, ref, onMounted, computed } from "vue";
 import axios from "axios";
 
+// Define interface
 interface Geo {
   lat: string;
   lng: string;
@@ -61,6 +64,7 @@ export default defineComponent({
       users.value.find((user) => user.id === selectedUserId.value)
     );
 
+    // Fetch data from API
     const fetchUsers = async () => {
       try {
         const response = await axios.get<User[]>(
@@ -73,10 +77,12 @@ export default defineComponent({
       }
     };
 
+    // update selected user
     const updateSelectedUser = () => {
       selectedUserId.value = selectedUserId.value ? selectedUserId.value : null;
     };
 
+    // onLoad
     onMounted(fetchUsers);
 
     return {
@@ -89,4 +95,5 @@ export default defineComponent({
 });
 </script>
 
-<style src="./../assets/DropdownStyles.css" />
+<!-- Add styles -->
+<style src="../assets/DropdownStyles.css" />

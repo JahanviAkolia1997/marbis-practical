@@ -1,17 +1,22 @@
 <template>
+  <!-- Navigation bar with router links to different components -->
   <nav>
     <router-link to="/">Accordion</router-link> |
     <router-link to="/tabs">Tabs</router-link> |
     <router-link to="/dropdown">Dropdown</router-link>
   </nav>
+  <!-- Router view to display the component based on the current route -->
   <router-view />
 </template>
 
 <style>
+/* Styles for the navigation bar */
 nav {
   padding: 30px;
+  text-align: center;
 }
 
+/* Styles for the links within the navigation bar */
 nav a {
   font-weight: bold;
   color: #fff;
@@ -20,13 +25,16 @@ nav a {
   text-transform: uppercase;
 }
 
+/* Style for the active link (the link of the current route) */
 nav a.router-link-exact-active {
   color: #42b983;
 }
 
+/* Global styles */
 * {
   box-sizing: border-box;
 }
+
 :root {
   --color-primary: #ee75d2;
   --color-on-primary: white;
@@ -35,14 +43,17 @@ nav a.router-link-exact-active {
   --color-quaternary: red;
   --color-bg: #11071d;
 }
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
+/* Styles for the body element */
 body {
   width: 100vw;
   height: 100vh;
   display: grid;
   place-items: center;
   margin: 0;
-  font-family: "Road Rage", "Audiowide", "Helvetica Neue", "serif";
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.2em;
   font-weight: bold;
   overflow: hidden;
   background: radial-gradient(at center, transparent, var(--color-bg) 60%),

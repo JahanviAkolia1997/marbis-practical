@@ -1,6 +1,14 @@
+/* Dropdown styles */
 .dropdown {
   width: 80%;
   margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto;
+  /* background-color: #1c1c1c; */
+  color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
 
 select {
@@ -9,20 +17,10 @@ select {
   margin-bottom: 20px;
 }
 
-.user-details {
-  padding: 20px;
-  border: 1px solid #ccc;
-}
-
-.dropdown {
-  max-width: 600px;
-  margin: 0 auto;
-  /* background-color: #1c1c1c; */
-  color: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
+select option,
+.dropdown select {
   font-family: "Orbitron", sans-serif;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  letter-spacing: 0.2em;
 }
 
 .dropdown select {
@@ -32,7 +30,7 @@ select {
   background-color: #272727;
   border: none;
   outline: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #00ffff;
   border-radius: 5px;
   transition: background-color 0.3s;
@@ -42,11 +40,12 @@ select {
   background-color: #333333;
 }
 
+/* User details styles */
 .user-details {
   padding: 20px;
   background-color: #2d2d2d;
-  border-top: 1px solid #444;
   animation: fadeIn 0.5s ease-in-out;
+  padding: 20px;
 }
 
 .user-details p {
@@ -62,6 +61,7 @@ select {
   text-decoration: underline;
 }
 
+/* Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
